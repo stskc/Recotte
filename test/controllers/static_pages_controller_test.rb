@@ -4,8 +4,6 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-<<<<<<< HEAD
-=======
     assert_select "title", "reco:"
   end
 
@@ -13,7 +11,6 @@ class StaticPagesControllerTest < ActionController::TestCase
     get :register
     assert_response :success
     assert_select "title", "reco:"
->>>>>>> StaticPages
   end
 
 end
