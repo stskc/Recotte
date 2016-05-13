@@ -5,7 +5,7 @@ module StaticPagesHelper
       :iframe,
       '', # empty body
       width: 640,
-      height: 480,
+      height: 390,
       src: "https://www.youtube.com/embed/#{opts[:movie_id]}",
       frameborder: 0,
       allowfullscreen: true
