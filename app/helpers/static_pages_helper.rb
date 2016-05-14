@@ -6,9 +6,9 @@ module StaticPagesHelper
       '', # empty body
       width: 640,
       height: 390,
-      src: "https://www.youtube.com/embed/#{opts[:movie_id]}",
+      src: "https://www.youtube.com/embed/#{opts[:movie_id]}?autoplay=1",
       frameborder: 0,
-      allowfullscreen: true
+      allowfullscreen: true,
     )
     content_tag(:div, iframe, class: 'youtube-container')
   end
