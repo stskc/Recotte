@@ -6,7 +6,8 @@ class RecoTest < ActiveSupport::TestCase
   # end
 
   def setup
-    @reco = Reco.new(artist: "CHERRY NADE 169", song: "o/x game", youtube: "JZrzIdROfb4", star: 0)
+    @reco = Reco.where( 'id >= ?', rand(Reco.first.id..Reco.last.id) ).first
+    @reco2 = Reco.where( 'id >= ?', rand(Reco.first.id..Reco.last.id) ).last
   end
 
   test "should be valid" do

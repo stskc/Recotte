@@ -2,7 +2,7 @@
 <div class="center jumbotron">
   <div class="row">
     <div class="col-md-6">
-      <%= movie(movie_id: 'JZrzIdROfb4') %>
+      <%= movie(movie_id: @reco1.youtube) %>
     </div>
     <div class="col-md-3">
     </div>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="col-md-4">
-      <p>#song / #artist</p>
+      <%= @reco2.song%> / <%= @reco2.artist%>
     </div>
 
     <div class="col-md-2">
@@ -46,7 +46,7 @@
     </div>
 
     <div class="col-md-4">
-      <p>#song / #artist</p>
+      <%= @reco2.song%> / <%= @reco2.artist%>
     </div>
 
     <div class="col-md-2">

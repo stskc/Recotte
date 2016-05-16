@@ -3,7 +3,9 @@
     <%= link_to "reco:", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Do you like it ?",   '#' %></li>
+      <p style="padding-top: 12px; color: #99CCFF;">
+        <%= "Do you like  #{@reco1.song}  of  #{@reco1.artist}  ?" %>
+      </p>
       </ul>
     </nav>
     <nav>

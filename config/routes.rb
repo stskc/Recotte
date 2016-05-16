@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'recos/new'
+  resources :recos
 
   root 'static_pages#home'
-  get 'static_pages/register'
-
+  get 'new'         => 'recos#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
