@@ -1,57 +1,29 @@
 
-<div class="center jumbotron">
-  <div class="row">
-    <div class="col-md-6">
-      <%= movie(movie_id: @reco1.youtube) %>
-    </div>
-    <div class="col-md-3">
-    </div>
-  </div>
+<div class="center">
+  <%= movie(movie_id: @reco1.youtube) %>
+</div>
 
-  <div class="row">
-    <div class="col-md-3">
-      <p>Favorite! #☆ (#0)</p>
-    </div>
+<div class="">
+  <p>Share <i class="fa fa-share" aria-hidden="true"></i> <i class="fa fa-twitter-square" aria-hidden="true"></i> <i class="fa fa-facebook-square" aria-hidden="true"></i></p>
+  <p>More song of #thisArtist.</p>
+</div>
 
-    <div class="col-md-3">
-      <p>Share <i class="fa fa-share" aria-hidden="true"></i> <i class="fa fa-twitter-square" aria-hidden="true"></i> <i class="fa fa-facebook-square" aria-hidden="true"></i></p>
-    </div>
+<div class="">
+  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> #next</p>
+</div>
 
-    <div class="col-md-3">
-      <p>More song of #thisArtist.</p>
-    </div>
-  </div>
+<div class="">
+  <%= @reco2.song%> / <%= @reco2.artist%>
+</div>
 
-  <div class="row">
-    <div class="col-md-2">
-      <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> #next</p>
-    </div>
+<div class="">
+  <p><i class="fa fa-angle-double-up" aria-hidden="true"></i> #skip</p>
+</div>
 
-    <div class="col-md-4">
-      <%= @reco2.song%> / <%= @reco2.artist%>
-    </div>
+<div class="">
+  <p><i class="fa fa-angle-double-left" aria-hidden="true"></i> #prev</p>
+</div>
 
-    <div class="col-md-2">
-      <p>#☆</p>
-    </div>
-
-    <div class="col-md-2">
-      <p><i class="fa fa-angle-double-up" aria-hidden="true"></i> #skip</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-      <p><i class="fa fa-angle-double-left" aria-hidden="true"></i> #prev</p>
-    </div>
-
-    <div class="col-md-4">
-      <%= @reco2.song%> / <%= @reco2.artist%>
-    </div>
-
-    <div class="col-md-2">
-      <p>#☆</p>
-    </div>
-
-  </div>
+<div class="">
+  <%= @reco2.song%> / <%= @reco2.artist%>
 </div>

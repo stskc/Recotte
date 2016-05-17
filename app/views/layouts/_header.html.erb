@@ -1,18 +1,11 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="">
   <div class="container">
-    <%= link_to "reco:", root_path, id: "logo" %>
+    <%= link_to "Recotte", root_path, id: "logo" %>
     <nav>
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="">
       <p style="padding-top: 12px; color: #99CCFF;">
         <%= "Do you like  #{@reco1.song}  of  #{@reco1.artist}  ?" %>
       </p>
-      </ul>
-    </nav>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Next",   root_path %></li>
-        <li><%= link_to "List",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
       </ul>
     </nav>
   </div>

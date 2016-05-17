@@ -40,8 +40,6 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.0)
-      sass (~> 3.2)
     builder (3.2.2)
     byebug (3.4.0)
       columnize (~> 0.8)
@@ -62,8 +60,6 @@ GEM
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
-    font-awesome-sass (4.6.2)
-      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -215,10 +211,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (= 3.2.0.0)
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)
-  font-awesome-sass
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
