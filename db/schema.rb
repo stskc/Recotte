@@ -11,22 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515105018) do
+ActiveRecord::Schema.define(version: 20160517114138) do
 
-  create_table "recos", force: :cascade do |t|
+  create_table "mains", force: :cascade do |t|
     t.string   "artist"
     t.string   "song"
     t.string   "youtube"
-    t.integer  "star"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "nickname"
-    t.string   "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

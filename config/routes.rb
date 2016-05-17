@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :recos
+  resources :mains
 
   root 'static_pages#home'
   get 'new'         => 'recos#new'

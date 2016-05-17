@@ -4,10 +4,8 @@ one:
   artist: MyString
   song: MyString
   youtube: MyString
-  star: 1
 
 two:
   artist: MyString
   song: MyString
   youtube: MyString
-  star: 1
