@@ -4,27 +4,10 @@
 </div>
 
 <div class="">
-  <p>More song of #thisArtist.</p>
   <%= link_to "share_twitter", "https://twitter.com/intent/tweet?url=https%3A//youtu.be/#{@main1.youtube}&text=#{@main1.song} / #{@main1.artist}&via=YouTube&related=YouTube,YouTubeTrends,YTCreators" %>
   <%= link_to "share_facebook", "https://www.facebook.com/dialog/share?app_id=87741124305&href=https%3A//www.youtube.com/attribution_link%3Fa%3DRxjXxuxKCbk%26u%3D%252Fwatch%253Fv%253D#{@main1.youtube}%2526feature%253Dshare&display=popup&redirect_uri=https://www.youtube.com/facebook_redirect" %>
   </div>
 
 <div class="">
-  <p>#next</p>
-</div>
-
-<div class="">
-  <%= @main2.song%> / <%= @main2.artist%>
-</div>
-
-<div class="">
-  <p>#skip</p>
-</div>
-
-<div class="">
-  <p>#prev</p>
-</div>
-
-<div class="">
-  <%= @main2.song%> / <%= @main2.artist%>
+  <%= link_to "skip", root_path %>
 </div>
