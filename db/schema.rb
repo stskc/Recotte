@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517114138) do
+ActiveRecord::Schema.define(version: 20160523090412) do
 
   create_table "mains", force: :cascade do |t|
     t.string   "artist"
     t.string   "song"
     t.string   "youtube"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "viewed",     default: false, null: false
   end
 
 end
