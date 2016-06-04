@@ -1,9 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
 
 /* universal */
 
@@ -15,16 +18,12 @@ section {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
-}
-
 .center {
   text-align: center;
 }
 
 .center h1 {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 /* typography */
@@ -46,7 +45,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: gray;
+  color: $gray-light;;
 }
 
 p {
@@ -75,12 +74,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid gray;
-  color: gray;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
   a {
-    color: gray;
+    color: $gray;
     &:hover {
-      color: gray;
+      color: $gray-darker;
     }
   }
   small {
@@ -88,12 +87,19 @@ footer {
   }
 }
 
-/* miscellaneous */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+/* social */
+.social {
+    .button {
+        overflow: hidden;
+        margin-right: 5px;
+        margin-bottom: 4px;
+        &.facebook {
+            margin-right: 17px;
+        }
+        &.twitter {
+            width: 90px;
+            margin-right: 200px;
+        }
+    }
 }

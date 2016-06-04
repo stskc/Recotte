@@ -1,13 +1,67 @@
+<div class="center jumbotron">
+<div id="player"></div>
+<%= javascript_tag do %>
 
-<div class="center">
-  <%= movie(movie_id: @main1.youtube) %>
-</div>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-<div class="">
-  <%= link_to "share_twitter", "https://twitter.com/intent/tweet?url=https%3A//youtu.be/#{@main1.youtube}&text=#{@main1.song} / #{@main1.artist}&via=YouTube&related=YouTube,YouTubeTrends,YTCreators" %>
-  <%= link_to "share_facebook", "https://www.facebook.com/dialog/share?app_id=87741124305&href=https%3A//www.youtube.com/attribution_link%3Fa%3DRxjXxuxKCbk%26u%3D%252Fwatch%253Fv%253D#{@main1.youtube}%2526feature%253Dshare&display=popup&redirect_uri=https://www.youtube.com/facebook_redirect" %>
+  var VIDEO_ID = <%= raw @main1.youtube.to_json %>;
+  var player = null;
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: VIDEO_ID,
+    showinfo: 0,
+    playerVars: {
+        rel: 0,
+        autoplay: 1
+      },
+    events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.ENDED) {
+    location.href= 'http://localhost:3000';
+    }
+  }
+<% end %>
+
+
+  <div class="social clearfix">
+    <!-- Facebook -->
+    <div class="button facebook">
+      <div id="fb-root"></div>
+      <div class="fb-like"
+        data-href="<%= request.original_url %>"
+        data-layout="button_count"
+        data-send="false"
+        data-width="120"
+        data-show-faces="false">
+      </div>
+    </div>
   </div>
 
-<div class="">
-  <%= link_to "skip", root_path %>
+  <!-- Twitter -->
+  <div class="button twitter">
+  <a href="https://twitter.com/share" class="twitter-share-button"
+    data-lang="en"
+    data-url="https://www.youtube.com/embed/<%= @main1.youtube %>?autoplay=1"
+    data-text="<%= @main1.song %> / <%= @main1.artist %>">
+    Tweet
+  </a>
+  </div>
+
 </div>
