@@ -34,7 +34,7 @@
 
   function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    location.href= 'https://damp-inlet-25020.herokuapp.com/';
+    location.href= 'https://damp-inlet-25020.herokuapp.com';
     }
   }
 <% end %>
@@ -45,7 +45,7 @@
     <div class="button facebook">
       <div id="fb-root"></div>
       <div class="fb-like"
-        data-href="<%= request.original_url %>"
+        data-href="https://www.youtube.com/embed/<%= @main1.youtube %>?autoplay=1"
         data-layout="button_count"
         data-send="false"
         data-width="120"
